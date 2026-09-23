@@ -24,6 +24,8 @@ Inside the virtual environment run the following commands :
 
 ollama pull qwen3:0.6b
 
+ollama pull all-minim
 
-pip install langchain langchain-core langchain-ollama langchain-community langchain-classic gradio python-dotenv 
+
+pip install langchain langchain-core langchain-ollama langchain-community langchain-classic gradio python-dotenv pypdf faiss-cpu
 
