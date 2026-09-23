@@ -3,6 +3,7 @@ Agentic AI
 
 RAG based systems and AI Agents
 
+HACKATHON PROBLEM STATEMENT : https://claude.ai/public/artifacts/2eab0a3c-90b5-41a1-892c-cc2d700f9051
 
 SETUP 
 Install Antigravity 
@@ -28,4 +29,3 @@ ollama pull all-minim
 
 
 pip install langchain langchain-core langchain-ollama langchain-community langchain-classic gradio python-dotenv pypdf faiss-cpu
-
