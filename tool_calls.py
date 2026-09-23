@@ -4,6 +4,7 @@ import os
 import requests 
 from dotenv import load_dotenv
 from rag import ingest_data
+import json
 load_dotenv() 
 
 print("All libraries imported")
@@ -31,14 +32,15 @@ def get_job_recommendation(what:str,salary_min:int)->str:
     return response.json()
 
 if __name__ == "__main__":
-    # invoke web search tool 
-    response = web_search.invoke("Agentic AI 2026 capabilities")
-    print(response)
+    
+    # tool 1 invoke
+    #invoke the web search tool 
+    #response = web_search.invoke("Agentic AI 2026 capabilities")
+    #print(response)
 
-    # tool call below for the same function (uses invoke())
-    # print(get_job_recommendation.invoke({"what":"Data Analyst","salary_min":40000}))
-    # print(json.dumps(response, indent=4))
-    # print(f"Tool Name : {get_job_recommendation.name}")
-    # print(f"Tool Arguments : {get_job_recommendation.args}")
-    # print(f"Tool Description : {get_job_recommendation.description}")
-    # print(get_resume_data.invoke({"query":"technical skills"})[0])
+    #tool 2 invoke 
+    #print(get_resume_data.invoke({"query":"technical skills"})[0])
+
+    # tool 3 invoke 
+    response = get_job_recommendation.invoke({"what":"Data Analyst","salary_min":40000})
+    print(json.dumps(response,indent=4))
